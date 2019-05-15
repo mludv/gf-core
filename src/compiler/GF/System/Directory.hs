@@ -14,7 +14,7 @@ canonicalizePath path = liftIO $ D.canonicalizePath path
 createDirectoryIfMissing b = liftIO . D.createDirectoryIfMissing b
 doesDirectoryExist path = liftIO $ D.doesDirectoryExist path
 doesFileExist path = liftIO $ D.doesFileExist path
-getModificationTime path = liftIO $ fmap toUTCTime (D.getModificationTime path)
+getModificationTime path = liftIO $ D.getModificationTime path
 getDirectoryContents path = liftIO $ D.getDirectoryContents path
 
 getCurrentDirectory :: MonadIO io => io FilePath
